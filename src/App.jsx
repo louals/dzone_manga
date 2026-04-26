@@ -1,32 +1,68 @@
-import React, { useState } from 'react';
-import reactLogo from '/react.png';
-import viteLogo from '/vite.svg';
-import tailwindLogo from '/tailwind.png'; // you need a Tailwind logo SVG here
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Shop from './pages/Shop';
+import ProductPage from './pages/ProductPage';
+import About from './pages/About';
+import Cart from './pages/Cart';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
+  const addToCart = (product) => {
+    setCart((prev) => [...prev, product]);
+  };
+
+  const removeFromCart = (id) => {
+    setCart((prev) => prev.filter(item => item.id !== id));
+  };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      <div className="flex gap-6 mb-8">
-        <img src={reactLogo} className="w-24 h-24 " alt="React Logo" />
-        <img src={viteLogo} className="w-24 h-24" alt="Vite Logo" />
-        <img src={tailwindLogo} className="w-32 h-20 mt-3" alt="Tailwind Logo" />
+    <Router>
+      <div className="min-h-screen flex flex-col relative overflow-hidden">
+        <div className="noise-overlay" />
+        <ScrollToTop />
+        <Navbar 
+          darkMode={darkMode} 
+          setDarkMode={setDarkMode} 
+          cartCount={cart.length} 
+        />
+        
+        <main className="flex-grow pt-20">
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<Home addToCart={addToCart} />} />
+              <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+              <Route path="/product/:id" element={<ProductPage addToCart={addToCart} />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
+            </Routes>
+          </AnimatePresence>
+        </main>
+
+        <Footer />
       </div>
-
-      <h1 className="text-4xl font-bold mb-4">React + Vite + Tailwind Starter</h1>
-      <p className="mb-4 text-lg">Edit <code>App.jsx</code> and save to reload.</p>
-
-      <div className="flex gap-4 items-center">
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </div>
-
-    </div>
+    </Router>
   );
 }
 

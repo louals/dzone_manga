@@ -1,3 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #E74C3C;
+    --dark: #111111;
+    --light: #FFFFFF;
+    --gray-50: #F9F9F9;
+    --gray-100: #F5F5F5;
+  }
+
+  .dark {
+    --primary: #FF5E4D;
+    --dark: #FFFFFF;
+    --light: #111111;
+    --gray-50: #1A1A1A;
+    --gray-100: #222222;
+  }
+
+  body {
+    @apply font-body bg-light text-dark selection:bg-primary selection:text-white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading uppercase tracking-tighter;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-3 font-heading font-bold uppercase tracking-wider 
+    hover:bg-dark dark:hover:bg-white dark:hover:text-dark transition-all duration-300 
+    relative overflow-hidden active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-dark dark:border-white text-dark dark:text-white px-8 py-3 font-heading font-bold uppercase tracking-wider
+    hover:bg-dark hover:text-white dark:hover:bg-white dark:hover:text-dark transition-all duration-300 active:scale-95;
+  }
+
+  .btn-black {
+    @apply bg-black text-white border-2 border-black px-8 py-3 font-heading font-bold uppercase tracking-wider
+    hover:bg-white hover:text-black hover:border-white transition-all duration-300 active:scale-95;
+  }
+
+  .manga-panel {
+    @apply border-4 border-dark dark:border-white relative overflow-hidden;
+    box-shadow: 10px 10px 0px 0px rgba(231, 76, 60, 0.8);
+  }
+
+  .glass-nav {
+    @apply bg-white/80 dark:bg-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800;
+  }
+
+  .noise-overlay {
+    @apply fixed inset-0 pointer-events-none opacity-[0.03] z-[9999] mix-blend-overlay;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-600;
+}

@@ -7,18 +7,38 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink:  { 900:"#0E2330", 800:"#132B39", 700:"#1A3646", 100:"#E4EBEF" },
-        moss: { 500:"#3F6F54", 400:"#55936F", 300:"#7AB791" },
-        cream:{ 50:"#F7F1E6", 100:"#EFE7D6" },
+        primary: "#E74C3C",
+        dark: "#111111",
+        light: "#FFFFFF",
+        gray: {
+          50: "#F9F9F9",
+          100: "#F5F5F5",
+          200: "#EEEEEE",
+          300: "#E0E0E0",
+          800: "#222222",
+          900: "#1A1A1A",
+        }
       },
-      borderRadius: { brand:"1.25rem" },
-      boxShadow: {
-        soft:"0 10px 30px -10px rgba(0,0,0,.1)",
+      fontFamily: {
+        heading: ["Space Grotesk", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        manga: ["Bangers", "cursive"],
+      },
+      animation: {
+        "float": "float 6s ease-in-out infinite",
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        }
       },
       backgroundImage: {
-        "brand-radial":"radial-gradient(900px 420px at 70% 10%, rgba(122,183,145,.15), transparent)",
-      },
+        "noise": "url('https://grainy-gradients.vercel.app/noise.svg')",
+      }
     },
   },
+  darkMode: 'class',
   plugins: [],
 };
