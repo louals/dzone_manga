@@ -111,7 +111,7 @@ const ProductPage = ({ addToCart }) => {
             <Feature icon={<Truck size={18} />} text="Livraison DZ Express" />
             <Feature icon={<ShieldCheck size={18} />} text="100% Authentique" />
             <Feature icon={<RefreshCw size={18} />} text="Échange sous 7j" />
-            <Feature icon={<Star size={18} />} text="DZone Rewards" />
+            <Feature icon={<Star size={18} />} text=" Rewards" />
           </div>
         </div>
       </div>

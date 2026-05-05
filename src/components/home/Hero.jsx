@@ -30,7 +30,7 @@ const Hero = () => {
       >
         <img
           src="/hero.png"
-          alt="DZone Hero"
+          alt=" Hero"
           className="w-full h-full object-cover"
         />
         {/* Subtle overlay to ensure UI visibility */}
@@ -45,11 +45,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="relative group"
         >
-          <img 
-            src="/image.png" 
-            alt="Logo" 
-            className="h-32 md:h-64 w-auto drop-shadow-[0_0_50px_rgba(231,76,60,0.5)] transition-all duration-700 group-hover:scale-105" 
-          />
+          
         </motion.div>
       </div>
 

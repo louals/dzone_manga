@@ -19,7 +19,6 @@ const Home = ({ addToCart }) => {
       <Categories />
       <NewDrops addToCart={addToCart} />
       <TrustBadges />
-      <Location />
       <Newsletter />
     </motion.div>
   );

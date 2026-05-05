@@ -23,7 +23,7 @@ const Location = () => {
                 Le <span className="text-primary not-italic">Shop</span>
               </h2>
               <p className="text-gray-500 text-lg md:text-xl font-medium max-w-md mx-auto lg:mx-0 leading-relaxed">
-                Retrouvez-nous à Chéraga pour une expérience immersive au cœur de la culture manga.
+                Retrouvez-nous pour une expérience immersive au cœur de la culture manga.
               </p>
             </div>
 
@@ -51,7 +51,7 @@ const Location = () => {
                 </div>
               } />
               
-              <ContactItem icon={<Mail className="text-primary" size={24} />} title="Contact" content="contact@dzonemanga.com" />
+              <ContactItem icon={<Mail className="text-primary" size={24} />} title="Contact" content="contact@manga.com" />
             </div>
           </motion.div>
 
@@ -64,7 +64,7 @@ const Location = () => {
           >
             <div className="relative w-full max-w-[320px] md:max-w-[400px] aspect-[9/16] manga-panel group shadow-2xl">
               <video 
-                src="/dzone.mp4" 
+                src="/.mp4" 
                 className="w-full h-full object-cover"
                 autoPlay 
                 loop 

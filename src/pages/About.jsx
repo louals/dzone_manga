@@ -12,9 +12,6 @@ const About = () => {
     >
       {/* Hero */}
       <section className="bg-dark text-white py-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-          <img src="/image.png" alt="" className="w-full h-full object-contain rotate-12" />
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h1 
             initial={{ y: 30, opacity: 0 }}
@@ -48,7 +45,7 @@ const About = () => {
             <h2 className="text-5xl font-black tracking-tighter uppercase">Notre <span className="text-primary italic">Histoire</span></h2>
             <div className="space-y-6 text-gray-600 dark:text-gray-400 text-lg font-medium leading-relaxed">
               <p>
-                DZone Manga est né dans une petite chambre avec une pile de Shonen Jump et le rêve de faire découvrir l'effervescence de la street culture japonaise au monde entier.
+                 Manga est né dans une petite chambre avec une pile de Shonen Jump et le rêve de faire découvrir l'effervescence de la street culture japonaise au monde entier.
               </p>
               <p>
                 Nous trouvions que les boutiques de manga traditionnelles étaient trop génériques. Nous voulions quelque chose d'audacieux, quelque chose qui ressemble à une marque de streetwear premium tout en restant fidèle à nos racines otaku.

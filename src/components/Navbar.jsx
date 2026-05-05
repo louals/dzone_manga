@@ -27,14 +27,9 @@ const Navbar = ({ darkMode, setDarkMode, cartCount }) => {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group relative z-[60]">
-            <motion.img
-              src="/image.png"
-              alt="DZone Manga"
-              className="h-10 md:h-12 w-auto"
-              whileHover={{ rotate: 10, scale: 1.1 }}
-            />
+            
             <span className="font-heading text-xl md:text-2xl font-black tracking-tighter">
-              D<span className="text-primary">ZONE</span>
+              M<span className="text-primary">ANGA</span>
             </span>
           </Link>
 
@@ -117,14 +112,7 @@ const Navbar = ({ darkMode, setDarkMode, cartCount }) => {
                     transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                     className="flex whitespace-nowrap h-full items-center"
                   >
-                    {[...Array(10)].map((_, i) => (
-                      <img
-                        key={i}
-                        src="/image.png"
-                        alt=""
-                        className="h-[50vh] object-contain mx-10 grayscale invert"
-                      />
-                    ))}
+                    
                   </motion.div>
                 </div>
 
@@ -167,12 +155,12 @@ const Navbar = ({ darkMode, setDarkMode, cartCount }) => {
                 >
                   <div className="flex gap-10 mb-6">
                     {[
-                      { icon: BsInstagram, href: 'https://www.instagram.com/dzone_manga' },
+                      { icon: BsInstagram, href: 'https://www.instagram.com/_manga' },
                       {
                         icon: BsFacebook,
-                        href: 'https://www.facebook.com/people/Dzone-Manga/61572305105246/#',
+                        href: 'https://www.facebook.com/people/-Manga/61572305105246/#',
                       },
-                      { icon: BsTiktok, href: 'https://www.tiktok.com/@dzonemanga' },
+                      { icon: BsTiktok, href: 'https://www.tiktok.com/@manga' },
                     ].map((social, i) => (
                       <motion.a
                         key={i}
@@ -187,7 +175,7 @@ const Navbar = ({ darkMode, setDarkMode, cartCount }) => {
                     ))}
                   </div>
                   <p className="text-white/30 text-[10px] font-black uppercase tracking-[0.5em]">
-                    © 2026 DZone Manga — L'esprit Shonen
+                    © 2026  Manga — L'esprit Shonen
                   </p>
                 </motion.div>
 

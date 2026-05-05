@@ -11,23 +11,23 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src="/image.png" alt="Logo" className="h-10 w-auto" />
-              <span className="font-heading text-xl font-black tracking-tighter">DZONE</span>
+            
+              <span className="font-heading text-xl font-black tracking-tighter"></span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-6 font-medium">
               La destination ultime pour les amoureux de manga, collectionneurs et passionnés de streetwear. Entrez dans la Zone.
             </p>
             <div className="flex space-x-4">
               <SocialIcon 
-                href="https://www.instagram.com/dzone_manga" 
+                href="" 
                 icon={<BsInstagram size={20} />} 
               />
               <SocialIcon 
-                href="https://www.facebook.com/people/Dzone-Manga/61572305105246/#" 
+                href="" 
                 icon={<BsFacebook size={20} />} 
               />
               <SocialIcon 
-                href="https://www.tiktok.com/@dzonemanga" 
+                href="" 
                 icon={<BsTiktok size={20} />} 
               />
             </div>
@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="border-t-4 border-dark dark:border-white pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 dark:text-gray-500 text-xs font-black uppercase tracking-widest">
-            © 2026 DZone Manga. Tous droits réservés.
+            © 2026  Manga. Tous droits réservés.
           </p>
           <div className="flex gap-6 text-[10px] text-gray-500 font-black uppercase tracking-widest">
             <span className="hover:text-primary cursor-pointer">Conditions</span>
