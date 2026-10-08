@@ -1,32 +1,46 @@
-# React + Vite + Tailwind Starter 🚀
+# dzone_manga
 
-A minimal starter template for building React apps with **Vite** and **TailwindCSS**. Perfect for quickly spinning up projects without worrying about setup.  
+> Manga browsing and collection web app with an anime/manga-themed storefront.
 
----
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+## Overview
+
+Manga browsing and collection web app with an anime/manga-themed storefront.
+
+## Tech Stack
+
+Web
 
 ## Features
 
-- ✅ React 
-- ✅ Vite bundler (super fast!)
-- ✅ TailwindCSS for styling
-- ✅ Minimal and ready-to-use
-- ✅ Dark mode support out of the box
-
----
+- Manga catalog
+- E-commerce flow
 
 ## Getting Started
 
-### 1. Clone the repo
+### Prerequisites
+
+Make sure you have the tools required for this stack installed (e.g. Python 3.10+, Node.js 18+, or Android Studio).
+
+### Installation & Usage
 
 ```bash
-git clone https://github.com/yourusername/react-vite-tailwind-starter.git
-cd react-vite-tailwind-skeleton
-2. Install dependencies
+git clone https://github.com/<your-username>/dzone_manga.git
+cd dzone_manga
 npm install
-3. Start development server
-npm run dev
-Open http://localhost:5173 in your browser.
+npm run dev     # or `npm start`, depending on the setup
 ```
 
-Build for Production
-npm run build
+## Contributing
+
+Contributions are welcome. Fork the repo, create a feature branch, and open a pull request.
+
+## License
+
+Distributed under the MIT License (change as needed).
+
+## Author
+
+**Louai**: [GitHub](https://github.com/<louals>)
